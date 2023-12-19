@@ -78,8 +78,8 @@ document.querySelector("#container").addEventListener("click", function (dets) {
                 }
                 setTimeout(function () {
 
-                 document.querySelector(`#${dets.target.dataset.over}`).style.display = "initial";
-                 document.querySelector(`#${prev.dataset.over}`).style.display = "initial";
+                 document.querySelector(`#${dets.target.dataset.over}`).style.display = "flex";
+                 document.querySelector(`#${prev.dataset.over}`).style.display = "flex";
 
                 }, 500)
 
