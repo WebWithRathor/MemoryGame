@@ -19,18 +19,18 @@ function shuffle() {
     arr.forEach(function (e, i) {
         clutter += `<div class="card" id=""cards>
         <div class="overlay" id="o${i}">
-          <img src="https://png.pngtree.com/png-vector/20221116/ourmid/pngtree-dinosaur-line-art-cartoon-png-image_6459785.png" alt="">
+          <img  src="https://png.pngtree.com/png-vector/20221116/ourmid/pngtree-dinosaur-line-art-cartoon-png-image_6459785.png" alt="">
         </div>
-    <img src="${e.img}" data-over="o${i}" id="c${i}" alt="">
+    <img draggable="false" src="${e.img}" data-over="o${i}" id="c${i}" alt="">
     </div>`
     })
     document.querySelector("#container").innerHTML = clutter
     rotate();
-    gsap.from(".card",{
-        scale:.2,
-        opacity:0,  
+    gsap.from(".card", {
+        scale: .2,
+        opacity: 0,
         // stagger:.2,
-        rotate:90
+        rotate: 90
     })
 }
 shuffle();
@@ -44,11 +44,11 @@ document.querySelector(".scoreCard button").addEventListener("click", function (
 
 
 
-function rotate(){
-    document.querySelectorAll(".card").forEach(function(e){
-        random =Math.floor(Math.random()*(-3  -3))+3
-        gsap.set(e,{
-            rotate:random
+function rotate() {
+    document.querySelectorAll(".card").forEach(function (e) {
+        random = Math.floor(Math.random() * (-3 - 3)) + 3
+        gsap.set(e, {
+            rotate: random
         })
     })
 };
@@ -78,8 +78,8 @@ document.querySelector("#container").addEventListener("click", function (dets) {
                 }
                 setTimeout(function () {
 
-                 document.querySelector(`#${dets.target.dataset.over}`).style.display = "flex";
-                 document.querySelector(`#${prev.dataset.over}`).style.display = "flex";
+                    document.querySelector(`#${dets.target.dataset.over}`).style.display = "flex";
+                    document.querySelector(`#${prev.dataset.over}`).style.display = "flex";
 
                 }, 500)
 

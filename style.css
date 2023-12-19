@@ -1,45 +1,49 @@
-*{
+* {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html,body{
-width: 100%;
-height: 100%;
+html,
+body {
+    width: 100%;
+    height: 100%;
 }
-#main{
-width: 100%;
+
+#main {
+    width: 100%;
 }
-#page1{
-width: 100%;
-height: 100vh;
-display: flex;
-flex-direction: column;
-color: white;
-align-items: center;
-justify-content: center;
-background-color: black;
-gap: 2vw;
-background: url(https://img.freepik.com/free-vector/dinosaurs-extinct-with-meteorite-falling-earth_107791-1773.jpg?w=1380&t=st=1702972697~exp=1702973297~hmac=b362ec8bc01ce2f81d81464e3c21b345f5f2b1fe44140c4ad7568c31651169d5);
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+
+#page1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    gap: 2vw;
+    background: url(https://img.freepik.com/free-vector/dinosaurs-extinct-with-meteorite-falling-earth_107791-1773.jpg?w=1380&t=st=1702972697~exp=1702973297~hmac=b362ec8bc01ce2f81d81464e3c21b345f5f2b1fe44140c4ad7568c31651169d5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
-#container{
-width: 60%;
-height: 75vh;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
-gap: 2vw;
-position: relative;
+#container {
+    width: 60%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    position: relative;
 }
-.card{
+
+.card {
     height: calc(100%/3.4);
     width: calc(100%/4.75);
     position: relative;
@@ -47,7 +51,8 @@ position: relative;
     overflow: hidden;
     border: none;
 }
-.overlay{
+
+.overlay {
     position: absolute;
     height: 101%;
     width: 101%;
@@ -56,23 +61,24 @@ position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background :linear-gradient(45deg , rgb(228, 255, 91)  15% ,rgb(117, 101, 0) 30%,rgb(110, 225, 34) 30%,black );
-  
+    background: linear-gradient(45deg, rgb(228, 255, 91) 15%, rgb(117, 101, 0) 30%, rgb(110, 225, 34) 30%, black);
+
 }
 
-.card>img{
+.card>img {
     border-radius: 1vw;
     height: 100%;
-
     width: 100%;
     object-fit: cover;
     object-position: left;
     cursor: pointer;
-    
+    user-select: none;
 }
-.overlay img{
+
+.overlay img {
     width: 70%;
 }
+
 .scoreCard {
     width: 60%;
     gap: 2vw;
@@ -80,7 +86,8 @@ position: relative;
     align-items: center;
     justify-content: center;
 }
-.scoreCard button{
+
+.scoreCard button {
     padding: .7vw 2vw;
     border-radius: 5px;
     background-color: transparent;
@@ -92,10 +99,11 @@ position: relative;
     font-weight: 500;
 
 }
-.scoreCard button::after{
+
+.scoreCard button::after {
     content: '';
     position: absolute;
-    background :linear-gradient(45deg , rgb(228, 255, 91)  15% ,rgb(117, 101, 0) 30%,rgb(110, 225, 34) 35%,black );
+    background: linear-gradient(45deg, rgb(228, 255, 91) 15%, rgb(117, 101, 0) 30%, rgb(110, 225, 34) 35%, black);
     transition: all ease .5s;
     border-radius: 5px;
     z-index: -1;
@@ -106,34 +114,41 @@ position: relative;
     height: 100%;
     width: 100%;
 }
-.scoreCard button:hover{
+
+.scoreCard button:hover {
     border: 1px solid transparent;
     color: black;
 
 }
-.scoreCard button:hover::after{
+
+.scoreCard button:hover::after {
     scale: 1;
     opacity: 1;
 
 }
+
 @media (max-width:600px) {
-    #page1{
+    #page1 {
         justify-content: flex-start;
         padding-top: 10vw;
     }
-    #container{
+
+    #container {
         width: 90%;
         height: 65vh;
-        }
-    .card{
+    }
+
+    .card {
         height: calc(100%/4.3);
         width: calc(100%/4.4);
     }
+
     .scoreCard {
         width: 60%;
         gap: 5vw;
     }
-    .scoreCard button{
+
+    .scoreCard button {
         padding: 1.5vw 3vw;
         border-radius: 5px;
         background-color: transparent;
@@ -143,6 +158,6 @@ position: relative;
         z-index: 1;
         overflow: hidden;
         font-weight: 500;
-    
+
     }
 }
